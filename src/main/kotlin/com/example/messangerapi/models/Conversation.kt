@@ -20,5 +20,5 @@ class Conversation (
     val createAt: Date = Date.from(Instant.now())
     ){
     @OneToMany(mappedBy = "conversation", targetEntity = Message::class)
-    private var messages: Collection<Message>? = null
+    var messages: Collection<Message>? = null
 }
