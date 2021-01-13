@@ -30,7 +30,7 @@ class UserController(
     fun show(@PathVariable("user_id") userId: Long):
             ResponseEntity<UserVO>{
         val user = userService.retriveUserData(userId)
-        return ResponseEntity.ok(userAssembler.toUserVO(user))
+        return ResponseEntity.ok(userAssembler.toUserVO(user!!))
     }
 
     @GetMapping

@@ -7,12 +7,14 @@ import org.springframework.stereotype.Component
 
 @Component
 class UserAssembler {
-    fun toUserVO(user: User?): UserVO{
-        return UserVO(user.id,
-        user.username,
-        user.phoneNumber,
-        user.status,
-        user.createAt.toString()
+    fun toUserVO(user: User
+    ): UserVO {
+        return UserVO(
+            user.id,
+            user.username,
+            user.phoneNumber,
+            user.status,
+            user.createAt.toString()
         )
     }
 

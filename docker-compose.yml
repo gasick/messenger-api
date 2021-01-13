@@ -1,6 +1,15 @@
 version: "3.9"
 
 services:
+  messengerapi:
+    build: .
+    restart: always
+    env_file:
+      - dev.env
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
   db:
     image: postgres
     restart: always
